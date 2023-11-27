@@ -1,0 +1,291 @@
+13:12:27 **** Build of configuration Debug for project M3_Drivers ****
+make -j4 all 
+arm-none-eabi-g++ "../Src/DRV_CPU.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/DRV_CPU.d" -MT"Src/DRV_CPU.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/DRV_CPU.o"
+arm-none-eabi-g++ "../Src/DRV_DMA.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/DRV_DMA.d" -MT"Src/DRV_DMA.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/DRV_DMA.o"
+arm-none-eabi-g++ "../Src/DRV_IO.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/DRV_IO.d" -MT"Src/DRV_IO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/DRV_IO.o"
+arm-none-eabi-g++ "../Src/DRV_SSR.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/DRV_SSR.d" -MT"Src/DRV_SSR.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/DRV_SSR.o"
+arm-none-eabi-ar -r  "libM3_Drivers.a" @"objects.list"  
+Finished building target: libM3_Drivers.a
+ 
+13:12:28 **** Incremental Build of configuration Debug for project M3_Drivers ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:12:28 **** Build of configuration Debug for project Application ****
+make -j4 all 
+arm-none-eabi-g++ -o "Application.elf" @"objects.list"  -lM3_Kernel -lM3_Dependencies -lM3_Drivers -lM3_Internals -lM3_Peripherals -lM3_Prosa -mcpu=cortex-m3 -T"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/Application/EDROS_F103_C6_FLASH.ld" --specs=nosys.specs -Wl,-Map="Application.map" -Wl,--gc-sections -static -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Prosa/Debug" -Wl,--print-memory-usage -flto --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-closer.o): in function `_close_r':
+(.text._close_r+0xc): warning: _close is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-signalr.o): in function `_getpid_r':
+(.text._getpid_r+0x0): warning: _getpid is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-signalr.o): in function `_kill_r':
+(.text._kill_r+0xe): warning: _kill is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-lseekr.o): in function `_lseek_r':
+(.text._lseek_r+0x10): warning: _lseek is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-readr.o): in function `_read_r':
+(.text._read_r+0x10): warning: _read is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-writer.o): in function `_write_r':
+(.text._write_r+0x10): warning: _write is not implemented and will always fail
+Memory region         Used Size  Region Size  %age Used
+            VRAM:          0 GB        336 B      0.00%
+             RAM:        8344 B       9904 B     84.25%
+           FLASH:       28080 B        32 KB     85.69%
+Finished building target: Application.elf
+ 
+arm-none-eabi-size   Application.elf 
+arm-none-eabi-objdump -h -S  Application.elf  > "Application.list"
+   text	   data	    bss	    dec	    hex	filename
+  27904	    176	   8176	  36256	   8da0	Application.elf
+Finished building: default.size.stdout
+ 
+Finished building: Application.list
+ 
+13:17:03 **** Build of configuration Debug for project M3_Dependencies ****
+make -j4 all 
+arm-none-eabi-gcc "../STM32F1xx/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32F103xB -c -I../CMSIS -I../STM32F1xx/Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"STM32F1xx/Src/system_stm32f1xx.d" -MT"STM32F1xx/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F1xx/Src/system_stm32f1xx.o"
+arm-none-eabi-ar -r  "libM3_Dependencies.a" @"objects.list"  
+Finished building target: libM3_Dependencies.a
+ 
+13:17:04 **** Incremental Build of configuration Debug for project M3_Drivers ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:17:04 **** Incremental Build of configuration Debug for project M3_Drivers ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:17:04 **** Incremental Build of configuration Debug for project Application ****
+make -j4 all 
+arm-none-eabi-g++ -o "Application.elf" @"objects.list"  -lM3_Kernel -lM3_Dependencies -lM3_Drivers -lM3_Internals -lM3_Peripherals -lM3_Prosa -mcpu=cortex-m3 -T"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/Application/EDROS_F103_C6_FLASH.ld" --specs=nosys.specs -Wl,-Map="Application.map" -Wl,--gc-sections -static -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Prosa/Debug" -Wl,--print-memory-usage -flto --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-closer.o): in function `_close_r':
+(.text._close_r+0xc): warning: _close is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-signalr.o): in function `_getpid_r':
+(.text._getpid_r+0x0): warning: _getpid is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-signalr.o): in function `_kill_r':
+(.text._kill_r+0xe): warning: _kill is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-lseekr.o): in function `_lseek_r':
+(.text._lseek_r+0x10): warning: _lseek is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-readr.o): in function `_read_r':
+(.text._read_r+0x10): warning: _read is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-writer.o): in function `_write_r':
+(.text._write_r+0x10): warning: _write is not implemented and will always fail
+Memory region         Used Size  Region Size  %age Used
+            VRAM:          0 GB        336 B      0.00%
+             RAM:        8344 B       9904 B     84.25%
+           FLASH:       28080 B        32 KB     85.69%
+Finished building target: Application.elf
+ 
+arm-none-eabi-size   Application.elf 
+arm-none-eabi-objdump -h -S  Application.elf  > "Application.list"
+   text	   data	    bss	    dec	    hex	filename
+  27904	    176	   8176	  36256	   8da0	Application.elf
+Finished building: default.size.stdout
+ 
+Finished building: Application.list
+ 
+13:17:05 **** Clean-only build of configuration Debug for project M3_Internals ****
+make -j4 clean 
+rm -rf ./Src/NAnalogParameter.cyclo ./Src/NAnalogParameter.d ./Src/NAnalogParameter.o ./Src/NAnalogParameter.su ./Src/NComponent.cyclo ./Src/NComponent.d ./Src/NComponent.o ./Src/NComponent.su ./Src/NCounter.cyclo ./Src/NCounter.d ./Src/NCounter.o ./Src/NCounter.su ./Src/NFifo.cyclo ./Src/NFifo.d ./Src/NFifo.o ./Src/NFifo.su ./Src/NFilter.cyclo ./Src/NFilter.d ./Src/NFilter.o ./Src/NFilter.su ./Src/NKalman.cyclo ./Src/NKalman.d ./Src/NKalman.o ./Src/NKalman.su ./Src/NParameter.cyclo ./Src/NParameter.d ./Src/NParameter.o ./Src/NParameter.su ./Src/NTimer.cyclo ./Src/NTimer.d ./Src/NTimer.o ./Src/NTimer.su ./Src/Property.cyclo ./Src/Property.d ./Src/Property.o ./Src/Property.su
+rm -rf libM3_Internals.a
+ 
+13:17:05 **** Build of configuration Debug for project M3_Internals ****
+make -j4 all 
+arm-none-eabi-g++ "../Src/NAnalogParameter.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NAnalogParameter.d" -MT"Src/NAnalogParameter.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NAnalogParameter.o"
+arm-none-eabi-g++ "../Src/NComponent.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NComponent.d" -MT"Src/NComponent.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NComponent.o"
+arm-none-eabi-g++ "../Src/NCounter.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NCounter.d" -MT"Src/NCounter.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NCounter.o"
+arm-none-eabi-g++ "../Src/NFifo.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NFifo.d" -MT"Src/NFifo.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NFifo.o"
+../Src/NAnalogParameter.cpp: In member function 'uint32_t nanalogparameter_space::NAnalogParameter::ValueToInt()':
+../Src/NAnalogParameter.cpp:79:50: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   79 | uint32_t NAnalogParameter::ValueToInt(){ return(*(uint32_t*)&value);}
+      |                                                  ^~~~~~~~~~~~~~~~~
+../Src/NAnalogParameter.cpp: In member function 'bool nanalogparameter_space::NAnalogParameter::Export(uint8_t*)':
+../Src/NAnalogParameter.cpp:84:32: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   84 |         *(uint32_t*)ext_dat = *(uint32_t*)&value;       ext_dat += sizeof(value);
+      |                                ^~~~~~~~~~~~~~~~~
+../Src/NAnalogParameter.cpp:85:32: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   85 |         *(uint32_t*)ext_dat = *(uint32_t*)&Offset; ext_dat += sizeof(Offset);
+      |                                ^~~~~~~~~~~~~~~~~~
+../Src/NAnalogParameter.cpp:86:32: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   86 |         *(uint32_t*)ext_dat = *(uint32_t*)&Scale; ext_dat += sizeof(Scale);
+      |                                ^~~~~~~~~~~~~~~~~
+../Src/NAnalogParameter.cpp:87:32: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   87 |         *(uint32_t*)ext_dat = *(uint32_t*)&Bias; ext_dat += sizeof(Bias);
+      |                                ^~~~~~~~~~~~~~~~
+../Src/NAnalogParameter.cpp: In member function 'bool nanalogparameter_space::NAnalogParameter::Import(uint8_t*)':
+../Src/NAnalogParameter.cpp:94:10: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   94 |         *(uint32_t*)&value = *(uint32_t*)ext_dat;       ext_dat += sizeof(value);
+      |          ^~~~~~~~~~~~~~~~~
+../Src/NAnalogParameter.cpp:95:10: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   95 |         *(uint32_t*)&Offset = *(uint32_t*)ext_dat; ext_dat += sizeof(Offset);
+      |          ^~~~~~~~~~~~~~~~~~
+../Src/NAnalogParameter.cpp:96:10: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   96 |         *(uint32_t*)&Scale = *(uint32_t*)ext_dat; ext_dat += sizeof(Scale);
+      |          ^~~~~~~~~~~~~~~~~
+../Src/NAnalogParameter.cpp:97:10: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   97 |         *(uint32_t*)&Bias = *(uint32_t*)ext_dat; ext_dat += sizeof(Bias);
+      |          ^~~~~~~~~~~~~~~~
+../Src/NFifo.cpp: In member function 'void NFifo::Flush()':
+../Src/NFifo.cpp:116:6: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  116 |     *(uint32_t*)&flags = 0;
+      |      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-g++ "../Src/NFilter.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NFilter.d" -MT"Src/NFilter.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NFilter.o"
+arm-none-eabi-g++ "../Src/NKalman.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NKalman.d" -MT"Src/NKalman.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NKalman.o"
+arm-none-eabi-g++ "../Src/NParameter.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NParameter.d" -MT"Src/NParameter.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NParameter.o"
+../Src/NParameter.cpp: In constructor 'nparameter_space::NParameter::NParameter()':
+../Src/NParameter.cpp:22:37: warning: unnecessary parentheses in declaration of '__STANDARD_PARAMETER' [-Wparentheses]
+   22 | NParameter::NParameter(){ NParameter(__STANDARD_PARAMETER);}
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~
+../Src/NParameter.cpp:22:37: note: remove parentheses
+   22 | NParameter::NParameter(){ NParameter(__STANDARD_PARAMETER);}
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~
+      |                                     -                    -
+arm-none-eabi-g++ "../Src/NTimer.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NTimer.d" -MT"Src/NTimer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NTimer.o"
+arm-none-eabi-g++ "../Src/Property.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Property.d" -MT"Src/Property.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Property.o"
+arm-none-eabi-ar -r  "libM3_Internals.a" @"objects.list"  
+arm-none-eabi-ar: creating libM3_Internals.a
+Finished building target: libM3_Internals.a
+ 
+13:17:06 **** Build of configuration Debug for project M3_Kernel ****
+make -j4 all 
+arm-none-eabi-g++ "../Src/Interrupts.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103x6 -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Interrupts.d" -MT"Src/Interrupts.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Interrupts.o"
+arm-none-eabi-g++ "../Src/NMessagePipe.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103x6 -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NMessagePipe.d" -MT"Src/NMessagePipe.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NMessagePipe.o"
+arm-none-eabi-g++ "../Src/System.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103x6 -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/System.d" -MT"Src/System.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/System.o"
+arm-none-eabi-ar -r  "libM3_Kernel.a" @"objects.list"  
+Finished building target: libM3_Kernel.a
+ 
+13:17:07 **** Build of configuration Debug for project M3_Peripherals ****
+make -j4 all 
+arm-none-eabi-g++ "../Src/NAdc.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103x6 -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NAdc.d" -MT"Src/NAdc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NAdc.o"
+arm-none-eabi-g++ "../Src/NHardwareTimer.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103x6 -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NHardwareTimer.d" -MT"Src/NHardwareTimer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NHardwareTimer.o"
+arm-none-eabi-g++ "../Src/NInput.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103x6 -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NInput.d" -MT"Src/NInput.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NInput.o"
+arm-none-eabi-g++ "../Src/NLed.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103x6 -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NLed.d" -MT"Src/NLed.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NLed.o"
+../Src/NInput.cpp: In constructor 'NInput::NInput(GPIO_TypeDef*, uint32_t)':
+../Src/NInput.cpp:23:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   23 |     *((uint32_t*)&Pino_InitStructure) = 0;
+      |      ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-g++ "../Src/NMco.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103x6 -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NMco.d" -MT"Src/NMco.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NMco.o"
+arm-none-eabi-g++ "../Src/NOutput.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103x6 -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NOutput.d" -MT"Src/NOutput.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NOutput.o"
+arm-none-eabi-g++ "../Src/NSerial.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103x6 -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NSerial.d" -MT"Src/NSerial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NSerial.o"
+../Src/NOutput.cpp: In constructor 'NOutput::NOutput(GPIO_TypeDef*, uint32_t)':
+../Src/NOutput.cpp:25:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   25 |     *((uint32_t*)&Pino_InitStructure) = 0;
+      |      ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-g++ "../Src/NSpi.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103x6 -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NSpi.d" -MT"Src/NSpi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NSpi.o"
+arm-none-eabi-g++ "../Src/NSwitch.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103x6 -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NSwitch.d" -MT"Src/NSwitch.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NSwitch.o"
+../Src/NSpi.cpp: In member function 'bool NSpi::WriteNoDMA(void*, uint32_t)':
+../Src/NSpi.cpp:261:43: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  261 |                                         *((uint16_t*)&SPIx->DR) = ((uint16_t*)wdata)[c];
+      |                                          ~^~~~~~~~~~~~~~~~~~~~~
+../Src/NSpi.cpp:292:27: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  292 |                         *((uint16_t*)&SPIx->DR) = ((uint16_t*)bytes_pointer)[bytes_written++];
+      |                          ~^~~~~~~~~~~~~~~~~~~~~
+../Src/NSpi.cpp: In member function 'bool NSpi::WriteDMA(void*, uint32_t)':
+../Src/NSpi.cpp:343:74: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  343 |                         if(DATASIZE_IS_16BITS){ *((uint16_t*)&dummy) = *((uint16_t*)&SPIx->DR);}
+      |                                                                         ~^~~~~~~~~~~~~~~~~~~~~
+../Src/NSpi.cpp: In member function 'bool NSpi::ReadNoDMA(void*, uint32_t)':
+../Src/NSpi.cpp:373:74: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  373 |                         if(DATASIZE_IS_16BITS){ *((uint16_t*)&dummy) = *((uint16_t*)&SPIx->DR);}
+      |                                                                         ~^~~~~~~~~~~~~~~~~~~~~
+../Src/NSpi.cpp:381:51: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  381 |                         if(DATASIZE_IS_16BITS){ *((uint16_t*)&SPIx->DR) = (uint16_t)0xFFFF;}
+      |                                                  ~^~~~~~~~~~~~~~~~~~~~~
+../Src/NSpi.cpp:388:92: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  388 |                         if(DATASIZE_IS_16BITS){ ((uint16_t*)bytes_pointer)[bytes_read] = *((uint16_t*)&SPIx->DR);}
+      |                                                                                           ~^~~~~~~~~~~~~~~~~~~~~
+../Src/NSpi.cpp:415:51: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  415 |                         if(DATASIZE_IS_16BITS){ *((uint16_t*)&SPIx->DR) = ((uint16_t)0xFFFF);}
+      |                                                  ~^~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-g++ "../Src/NTinyOutput.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103x6 -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NTinyOutput.d" -MT"Src/NTinyOutput.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NTinyOutput.o"
+../Src/NSpi.cpp: In member function 'virtual void NSpi::InterruptCallBack(NMESSAGE*)':
+../Src/NSpi.cpp:549:59: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  549 |                                                         *((uint16_t*)&SPIx->DR) = ((uint16_t*)bytes_pointer)[bytes_written];
+      |                                                          ~^~~~~~~~~~~~~~~~~~~~~
+../Src/NSpi.cpp:571:102: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  571 |                                 if(DATASIZE_IS_16BITS){ ((uint16_t*)bytes_pointer)[bytes_read++] = *((uint16_t*)&SPIx->DR);}
+      |                                                                                                     ~^~~~~~~~~~~~~~~~~~~~~
+../Src/NSpi.cpp:575:67: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  575 |                                         if(DATASIZE_IS_16BITS){ *((uint16_t*)&SPIx->DR) = ((uint16_t)0xFFFF);}
+      |                                                                  ~^~~~~~~~~~~~~~~~~~~~~
+../Src/NTinyOutput.cpp: In constructor 'NTinyOutput::NTinyOutput(GPIO_TypeDef*, uint32_t)':
+../Src/NTinyOutput.cpp:33:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   33 |     *((uint32_t*)&Pino_InitStructure) = 0;
+      |      ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/NSpi.cpp: In member function 'bool NSpi::Read(void*, uint32_t)':
+../Src/NSpi.cpp:515:22: warning: 'result' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  515 |         return(result);
+      |                      ^
+arm-none-eabi-ar -r  "libM3_Peripherals.a" @"objects.list"  
+Finished building target: libM3_Peripherals.a
+ 
+13:17:08 **** Incremental Build of configuration Debug for project M3_Prosa ****
+make -j4 all 
+arm-none-eabi-g++ "../Src/NComFifo.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NComFifo.d" -MT"Src/NComFifo.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NComFifo.o"
+arm-none-eabi-g++ "../Src/NCommand.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NCommand.d" -MT"Src/NCommand.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NCommand.o"
+arm-none-eabi-g++ "../Src/NDataLink.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NDataLink.d" -MT"Src/NDataLink.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NDataLink.o"
+arm-none-eabi-g++ "../Src/NDatagram.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NDatagram.d" -MT"Src/NDatagram.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NDatagram.o"
+arm-none-eabi-g++ "../Src/NSerialCommand.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NSerialCommand.d" -MT"Src/NSerialCommand.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NSerialCommand.o"
+../Src/NComFifo.cpp: In member function 'bool ncomfifo_space::NComFifo::Get(ndatagram_space::NDatagram*)':
+../Src/NComFifo.cpp:50:18: warning: unused variable 'packet_size' [-Wunused-variable]
+   50 |         uint32_t packet_size = NFifo::Get(local_buffer);
+      |                  ^~~~~~~~~~~
+../Src/NDatagram.cpp: In member function 'bool ndatagram_space::NDatagram::Append(float)':
+../Src/NDatagram.cpp:278:34: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  278 |         *(uint32_t*)(payload) = *(uint32_t*)&FloatVar;
+      |                                  ^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-g++ "../Src/NSerialProtocol.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32F103xB -c -I../Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/CMSIS" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/STM32F1xx/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/NSerialProtocol.d" -MT"Src/NSerialProtocol.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/NSerialProtocol.o"
+arm-none-eabi-ar -r  "libM3_Prosa.a" @"objects.list"  
+arm-none-eabi-ar: creating libM3_Prosa.a
+Finished building target: libM3_Prosa.a
+ 
+13:18:09 **** Incremental Build of configuration Debug for project M3_Dependencies ****
+make -j4 all 
+arm-none-eabi-gcc "../STM32F1xx/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32F103xB -c -I../CMSIS -I../STM32F1xx/Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"STM32F1xx/Src/system_stm32f1xx.d" -MT"STM32F1xx/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F1xx/Src/system_stm32f1xx.o"
+arm-none-eabi-ar -r  "libM3_Dependencies.a" @"objects.list"  
+arm-none-eabi-ar: creating libM3_Dependencies.a
+Finished building target: libM3_Dependencies.a
+ 
+13:18:09 **** Incremental Build of configuration Debug for project M3_Drivers ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:18:09 **** Incremental Build of configuration Debug for project M3_Drivers ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:18:10 **** Incremental Build of configuration Debug for project Application ****
+make -j4 all 
+arm-none-eabi-g++ -o "Application.elf" @"objects.list"  -lM3_Kernel -lM3_Dependencies -lM3_Drivers -lM3_Internals -lM3_Peripherals -lM3_Prosa -mcpu=cortex-m3 -T"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/Application/EDROS_F103_C6_FLASH.ld" --specs=nosys.specs -Wl,-Map="Application.map" -Wl,--gc-sections -static -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Dependencies/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Kernel/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Debug" -L"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Prosa/Debug" -Wl,--print-memory-usage -flto --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-closer.o): in function `_close_r':
+(.text._close_r+0xc): warning: _close is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-signalr.o): in function `_getpid_r':
+(.text._getpid_r+0x0): warning: _getpid is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-signalr.o): in function `_kill_r':
+(.text._kill_r+0xe): warning: _kill is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-lseekr.o): in function `_lseek_r':
+(.text._lseek_r+0x10): warning: _lseek is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-readr.o): in function `_read_r':
+(.text._read_r+0x10): warning: _read is not implemented and will always fail
+/home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/nilo/st/stm32cubeide_1.13.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(libc_a-writer.o): in function `_write_r':
+(.text._write_r+0x10): warning: _write is not implemented and will always fail
+Memory region         Used Size  Region Size  %age Used
+            VRAM:          0 GB        336 B      0.00%
+             RAM:        8344 B       9904 B     84.25%
+           FLASH:       28080 B        32 KB     85.69%
+Finished building target: Application.elf
+ 
+arm-none-eabi-size   Application.elf 
+arm-none-eabi-objdump -h -S  Application.elf  > "Application.list"
+   text	   data	    bss	    dec	    hex	filename
+  27904	    176	   8176	  36256	   8da0	Application.elf
+Finished building: default.size.stdout
+ 
+Finished building: Application.list
+ 
+13:18:10 **** Incremental Build of configuration Debug for project M3_Internals ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:18:11 **** Incremental Build of configuration Debug for project M3_Kernel ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:18:11 **** Incremental Build of configuration Debug for project M3_Peripherals ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:18:11 **** Incremental Build of configuration Debug for project M3_Prosa ****
+make -j4 all 
+make: Nothing to be done for 'all'.

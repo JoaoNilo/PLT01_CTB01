@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.ExternalProject"/>
+		<item key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID" value="org.eclipse.ui.wizards.export.ZipFile"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="ZipFileExportWizard">
+		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
+		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
+		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01_2023_07_06.zip"/>
+			<item value="/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01_2023_05_12.zip"/>
+			<item value="/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/DGT-01_2023_03_08.zip"/>
+		</list>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="-94"/>
+		<item key="DIALOG_Y_ORIGIN" value="-272"/>
+		<item key="DIALOG_WIDTH" value="800"/>
+		<item key="DIALOG_HEIGHT" value="1040"/>
+		<item key="DIALOG_FONT_NAME" value="1|Umpush|10.0|0|GTK|1|"/>
+	</section>
+</section>

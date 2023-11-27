@@ -1,0 +1,23 @@
+2023-08-14 09:49:59,635 [INFO] Activator:176 - 
+
+
+2023-08-14 09:49:59,642 [INFO] Activator:177 - !SESSION log4j initialized
+2023-08-14 09:50:04,277 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SWT Webkit: Warning, You are using an old version of webkitgtk. (pre 2.4) BrowserFunction functionality will not be available
+2023-08-14 09:50:04,277 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SWT WebKit: error initializing DBus server, dBusServer == 0
+2023-08-14 09:50:07,563 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-08-14 09:51:16,765 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-08-14 09:51:16,765 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-08-14 09:51:16,766 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-08-14 11:16:18,664 [INFO] Activator:176 - 
+
+
+2023-08-14 11:16:18,667 [INFO] Activator:177 - !SESSION log4j initialized
+2023-08-14 11:16:24,380 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SWT Webkit: Warning, You are using an old version of webkitgtk. (pre 2.4) BrowserFunction functionality will not be available
+2023-08-14 11:16:24,380 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SWT WebKit: error initializing DBus server, dBusServer == 0
+2023-08-14 11:16:26,407 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-08-14 11:16:28,427 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Aug 14, 2023 11:16:28 AM org.glassfish.grizzly.http.server.NetworkListener start
+2023-08-14 11:16:28,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] INFO: Started listener bound to [localhost:1595]
+2023-08-14 11:16:28,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2023-08-14 11:16:28,432 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Aug 14, 2023 11:16:28 AM org.glassfish.grizzly.http.server.HttpServer start
+2023-08-14 11:16:28,433 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] INFO: [HttpServer] Started.
+2023-08-14 11:16:28,433 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

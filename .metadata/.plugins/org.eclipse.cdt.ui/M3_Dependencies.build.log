@@ -1,0 +1,10 @@
+13:18:09 **** Incremental Build of configuration Debug for project M3_Dependencies ****
+make -j4 all 
+arm-none-eabi-gcc "../STM32F1xx/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32F103xB -c -I../CMSIS -I../STM32F1xx/Inc -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Drivers/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Internals/Inc" -I"/home/nilo/Documents/Projects/CubeIde/STM32F1xx/PLACAR/CTB-01/M3_Peripherals/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"STM32F1xx/Src/system_stm32f1xx.d" -MT"STM32F1xx/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F1xx/Src/system_stm32f1xx.o"
+arm-none-eabi-ar -r  "libM3_Dependencies.a" @"objects.list"  
+arm-none-eabi-ar: creating libM3_Dependencies.a
+Finished building target: libM3_Dependencies.a
+ 
+
+13:18:09 Build Finished. 0 errors, 0 warnings. (took 331ms)
+
